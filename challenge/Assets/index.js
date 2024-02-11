@@ -170,14 +170,14 @@ function promptEngineer() {
       },
       {
           type: "input",
-          name: "officeNumber",
-          message: "Enter the engineer's office number:",
+          name: "github",
+          message: "Enter the engineer's github here:",
       },
         // Add similar prompts for other details (id, email, GitHub username)...
     ])
         .then((answers) => {
             // Create an Engineer instance with the provided answers
-            const engineer = new Engineer(answers.name, /* Other details... */);
+            const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
 
             // Add engineer to the team array
             team.push(engineer);
@@ -189,13 +189,13 @@ function promptEngineer() {
 
 // Function to prompt for intern details
 function promptIntern() {
-    inquirer.prompt([
-        {
-            type: "input",
-            name: "name",
-            message: "Enter the intern's name:",
-        },
-        {
+  inquirer.prompt([
+      {
+          type: "input",
+          name: "name",
+          message: "Enter the intern's name:",
+      },
+      {
           type: "input",
           name: "id",
           message: "Enter the intern's employee ID:",
@@ -205,17 +205,22 @@ function promptIntern() {
           name: "email",
           message: "Enter the intern's email:",
       },
-    ])
-        .then((answers) => {
-            // Create an Intern instance with the provided answers
-            const intern = new Intern(answers.name, /* Other details... */);
+      {
+          type: "input",
+          name: "school",
+          message: "Enter the intern's school:",
+      }
+  ])
+      .then((answers) => {
+          // Create an Intern instance with the provided answers
+          const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
 
-            // Add intern to the team array
-            team.push(intern);
+          // Add intern to the team array
+          team.push(intern);
 
-            // Continue prompting for more team members
-            promptTeamMembers();
-        });
+          // Continue prompting for more team members
+          promptTeamMembers();
+      });
 }
 
 // Function to generate HTML and write to file
