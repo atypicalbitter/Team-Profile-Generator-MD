@@ -129,6 +129,8 @@ function promptTeamMembers() {
             name: "memberType",
             message: "Select a team member type to add:",
             choices: ["Engineer", "Intern", "Finish Building Team"],
+
+            
         },
     ])
         .then((answer) => {
@@ -156,6 +158,21 @@ function promptEngineer() {
             name: "name",
             message: "Enter the engineer's name:",
         },
+      {
+          type: "input",
+          name: "id",
+          message: "Enter the engineer's employee ID:",
+      },
+      {
+          type: "input",
+          name: "email",
+          message: "Enter the engineer's email:",
+      },
+      {
+          type: "input",
+          name: "officeNumber",
+          message: "Enter the engineer's office number:",
+      },
         // Add similar prompts for other details (id, email, GitHub username)...
     ])
         .then((answers) => {
@@ -178,7 +195,16 @@ function promptIntern() {
             name: "name",
             message: "Enter the intern's name:",
         },
-        // Add similar prompts for other details (id, email, school)...
+        {
+          type: "input",
+          name: "id",
+          message: "Enter the intern's employee ID:",
+      },
+      {
+          type: "input",
+          name: "email",
+          message: "Enter the intern's email:",
+      },
     ])
         .then((answers) => {
             // Create an Intern instance with the provided answers
