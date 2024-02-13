@@ -68,9 +68,3 @@ Georgie Lillington || [Github](https://github.com/georgielill)
 
 ## Author
  * [Matt Dudman](https://github.com/atypicalbitter)
-
-
-
-
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
