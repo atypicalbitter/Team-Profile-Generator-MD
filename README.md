@@ -40,7 +40,7 @@ This then prints to rhe team.html in the output folder and displays like this on
 
 The other part of the challenge was to be able to utilise jest and run tests on our code. This was accomplished by calling 'npm test' in the intergrated terminal. Below is a screen shot of the results. It passed all the tests set out. 
 
-![Alt text](image.png)
+![Alt text](challenge/Media/image.png)
 
 
 ## License
